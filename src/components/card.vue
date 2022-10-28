@@ -14,7 +14,7 @@
       <v-spacer></v-spacer>
     </v-card-actions>
     <v-card-text v-if="show"
-      ><p>{{ content }}</p>
+      ><p v-html="content"></p>
       <br />
       <br />
       <v-row> <v-spacer></v-spacer><slot name="nextbtn"></slot></v-row>

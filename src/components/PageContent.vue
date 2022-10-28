@@ -71,16 +71,18 @@ export default {
       card1: {
         title: "Fase 1",
         subtitle: "Inicio del proyecto",
-        image: "https://landmarkhunter.com/photos/57/54/575479-M.jpg",
+        image: "https://2.bp.blogspot.com/-FRa4mAipzcA/Vf8gYlkPa8I/AAAAAAAAAg0/IMAUboWhtJo/s1600/INICIO.png",
         content: "Lo primero es realizar un levantamiento de la información, \
           se debe hacer un diagnóstico respecto a qué tan preparada está la\
           compañía para iniciarse en un proyecto de analítica, dentro de esta\
-          etapa se deben identificar factores como:\
-          * Tecnologias\
-          * Fuente de datos\
-          * Acceso a la información\
-          * Volumen\
-          * Instalaciones\
+          etapa se deben identificar factores como:<br/><br/>\
+          <ul>\
+            <li>Tecnologias.</li>\
+            <li>Fuente de datos</li>\
+            <li>Acceso a la información</li>\
+            <li>Volumen</li>\
+            <li>Instalaciones</li>\
+          </ul>\
         ",
         showcurrent: true,
         desablenextbtn: false,
@@ -88,7 +90,7 @@ export default {
       card2: {
         title: "Fase 2",
         subtitle: "Enternder el negocio",
-        image: "https://landmarkhunter.com/photos/57/54/575479-M.jpg",
+        image: "https://agenciadomus.com.mx/blog/wp-content/uploads/2019/06/blog-e1560797059757-1140x641.jpg",
         content: "En esta etapa es importante entender cuáles son esos objetivos,\
          pero, además, es fundamental reconocer los requerimientos y las necesidades\
          organizacionales, al identificar este aspecto se podrán reconocer aquellos\
@@ -99,7 +101,7 @@ export default {
       card3: {
         title: "Fase 3",
         subtitle: "Descubrimiento y entendimiento de los datos",
-        image: "https://landmarkhunter.com/photos/57/54/575479-M.jpg",
+        image: "https://miro.medium.com/max/3000/1*0o44SgYfO_NgbEbqRICftw.png",
         content: "Recolección inicial de datos para determinar la consistencia de la información:\
          Fuente de datos, compra de datos, datos abiertos",
         showcurrent: false,
@@ -108,7 +110,7 @@ export default {
       card4: {
         title: "Fase 4",
         subtitle: "Preparación de los datos",
-        image: "https://landmarkhunter.com/photos/57/54/575479-M.jpg",
+        image: "https://itcomunicacion.com.mx/wp-content/uploads/2020/02/datDeca-768x427.jpg",
         content: "Seleccionar los datos, filtrarlos, completar los datos que haganfalta,\
          integración de los datos, homogenizar.",
         showcurrent: false,
@@ -117,7 +119,7 @@ export default {
       card5: {
         title: "Fase 5",
         subtitle: "Construcción del modelo",
-        image: "https://landmarkhunter.com/photos/57/54/575479-M.jpg",
+        image: "https://c5e6g5f8.rocketcdn.me/wp-content/uploads/2014/10/pexels-photo-534220.jpeg",
         content: "Escoger la técnica para realizar el modelo, diseñar pruebas, controuir el modelo",
         showcurrent: false,
         desablenextbtn: false,
@@ -125,7 +127,7 @@ export default {
       card6: {
         title: "Fase 6",
         subtitle: "Evaluar el modelo",
-        image: "https://landmarkhunter.com/photos/57/54/575479-M.jpg",
+        image: "https://miro.medium.com/max/1135/1*cwEeGqeSP5h5MXFm67lD3w.png",
         content: "Verificar si el resultado cumple con las metas del modelo,\
          sirve para realizar un mejor entendimiento de los datos de la empresa?\
          los datos generan una nueva analítica\
