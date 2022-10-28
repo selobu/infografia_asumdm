@@ -1,17 +1,17 @@
 <template>
   <v-app>
     <v-main>
-      <HeaderToolbar />
-      <PageContent />
-      <Footer />
+        <HeaderToolbar />
+        <PageContent/>
+        <Footer />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import PageContent from "./components/PageContent.vue";
-import HeaderToolbar from "./layout/Toolbar.vue";
-import Footer from '@/layout/Footer.vue';
+import HeaderToolbar from "@/layout/Toolbar.vue";
+import Footer from "@/layout/Footer.vue";
 
 export default {
   name: "App",
@@ -27,3 +27,9 @@ export default {
   }),
 };
 </script>
+<style>
+#fill-heigth {
+  height: 80%;
+}
+
+</style>
