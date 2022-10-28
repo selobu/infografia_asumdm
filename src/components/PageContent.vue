@@ -9,7 +9,6 @@
           height="50"
         />
       </v-col>
-
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
           BIENVENIDO A LA INFOGRAFÍA
@@ -27,7 +26,6 @@
       >
     </v-row>
     <v-row v-else>
-      {{Object.keys(contents)}}
       <v-col cols="12" v-for="(item, index) in contents" :key="index">
         <Card
           v-if="item.showcurrent"
@@ -105,7 +103,7 @@ export default {
         content: "Recolección inicial de datos para determinar la consistencia de la información:\
          Fuente de datos, compra de datos, datos abiertos",
         showcurrent: false,
-        desablenextbtn: true,
+        desablenextbtn: false,
       },
       card4: {
         title: "Fase 4",
@@ -114,7 +112,7 @@ export default {
         content: "Seleccionar los datos, filtrarlos, completar los datos que haganfalta,\
          integración de los datos, homogenizar.",
         showcurrent: false,
-        desablenextbtn: true,
+        desablenextbtn: false,
       },
       card5: {
         title: "Fase 5",
@@ -122,7 +120,7 @@ export default {
         image: "https://landmarkhunter.com/photos/57/54/575479-M.jpg",
         content: "Escoger la técnica para realizar el modelo, diseñar pruebas, controuir el modelo",
         showcurrent: false,
-        desablenextbtn: true,
+        desablenextbtn: false,
       },
       card6: {
         title: "Fase 6",
@@ -133,7 +131,7 @@ export default {
          los datos generan una nueva analítica\
          verificar si responde a las expectativas.",
         showcurrent: false,
-        desablenextbtn: true,
+        desablenextbtn: false,
       },
     },
     show: false,
@@ -147,16 +145,14 @@ export default {
       let u = 1;
       const lencontents = Object.keys(this.contents).length;
       var newitems = { ...this.contents };
-      console.log({u})
       for (const k in newitems) {
         newitems[k] = {
           ...newitems[k],
           showcurrent: u === 1 ? true : false,
           desablenextbtn: u === lencontents ? true : false,
         };
-        u++;
+        u+=1;
       }
-      console.log({u})
       this.contents = { ...newitems };
     },
     changeview(index) {
