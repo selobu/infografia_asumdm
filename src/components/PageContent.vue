@@ -247,6 +247,7 @@ export default {
     onrefresh() {
       this.showiniciar = true;
       this.contents = this.f_restarcontents(this.contents);
+      window.scrollTo(0,0)
     },
     changeview(index) {
       var found = false;
