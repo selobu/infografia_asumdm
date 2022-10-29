@@ -4,7 +4,7 @@
       <v-col cols="12">
         <v-hover v-slot="{ isHovering, props }">
           <v-card
-            :elevation="isHovering ? 16 : 2"
+            :elevation="isHovering ? 12 : 2"
             :class="{ 'on-hover': isHovering }"
             v-bind="props"
             class="mx-auto"
