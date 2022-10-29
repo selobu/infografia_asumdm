@@ -37,7 +37,9 @@
                 ><v-switch
                   class="ma-2"
                   v-model="dosColumnas"
-                  :label="dosColumnas ? 'Mostrar dos columnas' : 'Mostrar una columna'"
+                  :label="
+                    dosColumnas ? 'Mostrar dos columnas' : 'Mostrar una columna'
+                  "
                   color="white"
                   hide-details
                 ></v-switch
@@ -124,7 +126,7 @@ export default {
         title: "Fase 1",
         subtitle: "Inicio del proyecto",
         image:
-          "https://2.bp.blogspot.com/-FRa4mAipzcA/Vf8gYlkPa8I/AAAAAAAAAg0/IMAUboWhtJo/s1600/INICIO.png",
+          "https://luisaolvera.com/wp-content/uploads/2019/06/a-que-edad-caminan-los-bebes-cuando-lo-hacen.jpg",
         content:
           "Lo primero es realizar un levantamiento de la información, \
           se debe hacer un diagnóstico respecto a qué tan preparada está la\
@@ -145,18 +147,28 @@ export default {
         image:
           "https://agenciadomus.com.mx/blog/wp-content/uploads/2019/06/blog-e1560797059757-1140x641.jpg",
         content:
-          "En esta etapa es importante entender cuáles son esos objetivos,\
-         pero, además, es fundamental reconocer los requerimientos y las necesidades\
-         organizacionales, al identificar este aspecto se podrán reconocer aquellos\
-         problemas que podrían resolverse con la implementación de la analítica",
+          "En esta etapa es importante entender: <br/><br/>\
+          <ul> \
+            <li> Cuales son esos objetivos,</li> \
+            <li> Reconocer los requerimientos</li> \
+            <li> LAs necesidade organizacionales</li> \
+          </ul> \
+          <br/> \
+          Al identificar este aspecto se podrán reconocer aquellos\
+          problemas que podrían resolverse con la implementación de la analítica\
+        ",
       },
       card3: {
         title: "Fase 3",
         subtitle: "Descubrimiento y entendimiento de los datos",
         image: "https://miro.medium.com/max/3000/1*0o44SgYfO_NgbEbqRICftw.png",
         content:
-          "Recolección inicial de datos para determinar la consistencia de la información:\
-         Fuente de datos, compra de datos, datos abiertos",
+          "Recolección inicial de datos para determinar la consistencia de la información:<br>\
+         <ul>\
+          <li>Fuente de datos: bases de datos, archivos csv, cluster</li>\
+          <li>Compra de datos: a un tercero que recolecte datos</li>\
+          <li>Datos abiertos: públicos que se puedan consultar</li>\
+        </ul>",
       },
       card4: {
         title: "Fase 4",
@@ -164,8 +176,13 @@ export default {
         image:
           "https://itcomunicacion.com.mx/wp-content/uploads/2020/02/datDeca-768x427.jpg",
         content:
-          "Seleccionar los datos, filtrarlos, completar los datos que hagan falta,\
-         integración de los datos, homogenizar.",
+          "<strong>Seleccionar los datos</strong>: Evitar traer los datos a la memoria en caso\
+           del big data, por ejemplo en pyspark evitar convertir los datos a pandasdataframe\
+           porque intenta llevarlos todos a la memoria<br/>\
+           <strong>Filtrarlos:</strong> para buscar la información que se necesita o categorizarla<br/>\
+           <strong>Completar:</strong> los datos que hagan falta<br/>\
+           <strong>Integrar:</strong>los datos,<br/>\
+           <strong>Homogenizar</strong>.",
       },
       card5: {
         title: "Fase 5",
@@ -173,17 +190,18 @@ export default {
         image:
           "https://c5e6g5f8.rocketcdn.me/wp-content/uploads/2014/10/pexels-photo-534220.jpeg",
         content:
-          "Escoger la técnica para realizar el modelo, diseñar pruebas, controuir el modelo",
+          "Escoger la técnica para realizar el modelo, diseñar pruebas, contruir el modelo",
       },
       card6: {
         title: "Fase 6",
         subtitle: "Evaluar el modelo",
         image: "https://miro.medium.com/max/1135/1*cwEeGqeSP5h5MXFm67lD3w.png",
         content:
-          "Verificar si el resultado cumple con las metas del modelo,\
-         sirve para realizar un mejor entendimiento de los datos de la empresa?\
-         los datos generan una nueva analítica\
-         verificar si responde a las expectativas.",
+          "Verificar si el resultado cumple con las metas del modelo y los objetivos del negocio,\
+         sirve para realizar un mejor entendimiento de los datos de la empresa?<br/>\
+         Los datos generan una nueva analítica?<br/>\
+         Verificar si responde a las expectativas.<br/>\
+         Rediseñar.",
       },
     },
     show: false,
