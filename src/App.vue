@@ -3,7 +3,6 @@
     <v-main id="background">
         <HeaderToolbar />
         <PageContent class="fill-height"  />
-        <Footer></Footer>
     </v-main>
   </v-app>
 </template>
@@ -11,7 +10,6 @@
 <script>
 import PageContent from "./components/PageContent.vue";
 import HeaderToolbar from "@/layout/Toolbar.vue";
-import Footer from "@/layout/Footer.vue";
 
 export default {
   name: "App",
@@ -19,7 +17,6 @@ export default {
   components: {
     PageContent,
     HeaderToolbar,
-    Footer,
   },
 
   data: () => ({

@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar  density="compact" color="primary" >
+    <v-toolbar  density="compact" color="blue-darken-2" >
 
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 

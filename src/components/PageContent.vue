@@ -1,23 +1,40 @@
 <template>
   <v-container>
-    <v-row class="text-center" max-width="900px">
+    <v-row class="text-center">
       <v-col cols="12">
-        <v-avatar>
-          <v-img
-            src="https://www.gravatar.com/avatar/302c652af1a74abdadf3dcaebd6513ee?s=250"
-            alt="Sebastian López"
-          ></v-img>
-        </v-avatar>
-      </v-col>
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">INFOGRAFÍA ASUM-DM</h1>
+        <v-card class="mx-auto" color="blue-darken-2" max-width="500px">
+          <div class="d-flex flex-no-wrap justify-space-between">
+            <div>
+              <v-card-title class="text-h5"> INFOGRAFÍA ASUM-DM </v-card-title>
+              <v-card-subtitle><p>Elaborado por Sebastian López <br/> selobu@gmail.com</p>
+              </v-card-subtitle>
+              <v-card-actions>
+                <v-container fluid>
+                  <v-switch
+                    class="ma-2"
+                    v-model="dosColumnas"
+                    :label="dosColumnas ? 'Dos columnas' : 'Una columna'"
+                    color="white"
+                    hide-details
+                  ></v-switch
+                ></v-container>
+              </v-card-actions>
+            </div>
+            <v-avatar class="ma-3" size="125" rounded="0">
+              <v-img
+                src="https://www.gravatar.com/avatar/302c652af1a74abdadf3dcaebd6513ee?s=250"
+                alt="Sebastian López"
+              ></v-img>
+            </v-avatar>
+          </div>
+        </v-card>
       </v-col>
     </v-row>
     <v-row class="text-center" v-if="showiniciar">
       <v-col
         ><v-btn
-          color="primary"
-          append-icon="mdi-chevron-down"
+          color="blue-darken-3"
+          append-icon="mdi-chevron-double-down"
           @click="showiniciar = false"
           >Inciar</v-btn
         ></v-col
@@ -27,14 +44,15 @@
       <v-col cols="12">
         <v-row>
           <v-spacer></v-spacer>
-          <v-switch
-            v-model="dosColumnas"
-            :label="dosColumnas ? 'Dos columnas' : 'Una columna'"
-          ></v-switch>
+          <v-toolbar> </v-toolbar>
           <v-spacer></v-spacer
         ></v-row>
       </v-col>
-      <v-col :cols="dosColumnas? '6':'12'" v-for="(item, index) in contents" :key="index">
+      <v-col
+        :cols="dosColumnas ? '6' : '12'"
+        v-for="(item, index) in contents"
+        :key="index"
+      >
         <Card
           v-if="item.showcurrent"
           :title="item.title"
@@ -53,21 +71,27 @@
           </template>
         </Card>
       </v-col>
-      <v-col cols="6">
-        <v-btn
-          icon="mdi-refresh"
-          size="large"
-          color="primary"
-          @click="onrefresh"
-          title="Reiniciar"
-          label="Reinciar"
-        ></v-btn>
+      <v-col cols="12">
+        <v-row>
+          <v-spacer></v-spacer
+          ><v-btn
+            icon="mdi-refresh"
+            size="large"
+            color="blue-darken-2"
+            @click="onrefresh"
+            title="Reiniciar"
+            label="Reinciar"
+          ></v-btn>
+          <v-spacer></v-spacer>
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
+  <Footer></Footer>
 </template>
 
 <script>
+import Footer from "@/layout/Footer.vue";
 import Card from "./card.vue";
 export default {
   name: "HelloWorld",
@@ -147,6 +171,7 @@ export default {
   }),
   components: {
     Card,
+    Footer,
   },
   beforeMount() {
     this.contents = this.f_restarcontents(this.contents);
