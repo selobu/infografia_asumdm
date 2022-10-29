@@ -49,6 +49,16 @@
         </v-hover>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col cols="12">
+        <Card class="mx-auto"
+          title="Metodología ASUM-DM"
+          subtitle="Analítica de datos"
+          :content="asumcontent"
+          image="https://www.researchgate.net/profile/Christophe-Ponsard/publication/321944704/figure/fig2/AS:585568132022272@1516621730460/ASUM-DM-method-source-29.png"
+        > </Card>
+      </v-col>
+    </v-row>
     <v-row class="text-center" v-if="showiniciar">
       <v-col
         ><v-btn
@@ -121,6 +131,13 @@ export default {
     showPresentacion: false,
     showiniciar: true,
     dosColumnas: false,
+    asumcontent:"Debido a las falencias en <strong>CRISP-DM</strong>, en 2015 IBM publicó el método unificado para\
+            la solución de analíticas para el modelo de proceso de minado y predicción de datos - <strong>ASUM-DM</strong>.<br/>\
+            Se basa en <strong>CRISP-DM</strong> per lo extiende con tareas y actividades en infraestructura, opercaciones, \
+            proyecto y despliegue, tambien adiciona templates y guías a todas las tareas.<br/> \
+            <strong>ASUM-DM</strong> hace parte de framework mas genéricollamado método unificado para la analítica de soluciones \
+            <strong>ASUM </strong> que provee producto- y solucion - las rutas para la implementación específica\
+            cubiendo todos los productos de analítica de <strong>IBM</strong>.",
     contents: {
       card1: {
         title: "Fase 1",
