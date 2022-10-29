@@ -1,6 +1,9 @@
 <template>
-  <v-hover v-slot="{ hover }">
-    <v-card class="mx-auto" max-width="500px" :class="{ 'on-hover': hover }">
+  <v-hover open-delay="100">
+  <template v-slot:default="{  isHovering, props }">
+    <v-card class="mx-auto" max-width="500px"  
+    :elevation="isHovering ? 12 : 2"
+    v-bind="props">
       <v-img :src="image" height="200px" cover></v-img>
 
       <v-card-title>{{ title }}</v-card-title>
@@ -22,6 +25,7 @@
         <v-row> <v-spacer></v-spacer><slot name="nextbtn"></slot></v-row>
       </v-card-text>
     </v-card>
+  </template>
   </v-hover>
 </template>
 <script>

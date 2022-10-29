@@ -2,32 +2,46 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-card class="mx-auto" color="blue-darken-2" max-width="500px">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <div>
-              <v-card-title class="text-h5"> INFOGRAFÍA ASUM-DM </v-card-title>
-              <v-card-subtitle><p>Elaborado por Sebastian López <br/> selobu@gmail.com</p>
-              </v-card-subtitle>
-              <v-card-actions>
-                <v-container fluid>
-                  <v-switch
-                    class="ma-2"
-                    v-model="dosColumnas"
-                    :label="dosColumnas ? 'Dos columnas' : 'Una columna'"
-                    color="white"
-                    hide-details
-                  ></v-switch
-                ></v-container>
-              </v-card-actions>
-            </div>
-            <v-avatar class="ma-3" size="125" rounded="0">
-              <v-img
-                src="https://www.gravatar.com/avatar/302c652af1a74abdadf3dcaebd6513ee?s=250"
-                alt="Sebastian López"
-              ></v-img>
-            </v-avatar>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ isHovering, props }">
+          <v-card
+            :elevation="isHovering ? 16 : 2"
+            :class="{ 'on-hover': isHovering }"
+            v-bind="props"
+            class="mx-auto"
+            color="blue-darken-2"
+            max-width="500px"
+          >
+            <div class="d-flex flex-no-wrap justify-space-between">
+              <div>
+                <v-card-title class="text-h5">
+                  INFOGRAFÍA ASUM-DM
+                </v-card-title>
+                <v-card-subtitle
+                  ><p>
+                    Elaborado por Sebastian López <br />
+                    selobu@gmail.com
+                  </p>
+                </v-card-subtitle>
+                <v-card-actions>
+                  <v-container fluid>
+                    <v-switch
+                      class="ma-2"
+                      v-model="dosColumnas"
+                      :label="dosColumnas ? 'Dos columnas' : 'Una columna'"
+                      color="white"
+                      hide-details
+                    ></v-switch
+                  ></v-container>
+                </v-card-actions>
+              </div>
+              <v-avatar class="ma-3" size="125" rounded="0">
+                <v-img
+                  src="https://www.gravatar.com/avatar/302c652af1a74abdadf3dcaebd6513ee?s=250"
+                  alt="Sebastian López"
+                ></v-img>
+              </v-avatar>
+            </div> </v-card
+        ></v-hover>
       </v-col>
     </v-row>
     <v-row class="text-center" v-if="showiniciar">
