@@ -1,45 +1,50 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row>
       <v-col cols="12">
         <v-hover v-slot="{ isHovering, props }">
           <v-card
+            class="mx-auto"
+            max-width="434"
+            tile
             :elevation="isHovering ? 12 : 2"
             :class="{ 'on-hover': isHovering }"
             v-bind="props"
-            class="mx-auto"
-            color="blue-darken-2"
-            max-width="500px"
           >
             <div class="d-flex flex-no-wrap justify-space-between">
-              <div>
-                <v-card-title class="text-h5"> ASUM-DM </v-card-title>
-                <v-card-subtitle
-                  ><p>
-                    Sebastian López Buriticá<br />
-                    selobu@gmail.com
-                  </p>
-                </v-card-subtitle>
-                <v-card-actions>
-                  <v-container fluid>
-                    <v-switch
-                      class="ma-2"
-                      v-model="dosColumnas"
-                      :label="dosColumnas ? 'Dos columnas' : 'Una columna'"
-                      color="white"
-                      hide-details
-                    ></v-switch
-                  ></v-container>
-                </v-card-actions>
-              </div>
-              <v-avatar class="ma-3" size="125" rounded="0">
-                <v-img
-                  src="https://www.gravatar.com/avatar/302c652af1a74abdadf3dcaebd6513ee?s=250"
-                  alt="Sebastian López"
-                ></v-img>
-              </v-avatar>
-            </div> </v-card
-        ></v-hover>
+              <v-img
+                height="100%"
+                cover
+                src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+              >
+                <v-avatar color="grey" size="150" rounded="0">
+                  <v-img
+                    cover
+                    src="https://www.gravatar.com/avatar/302c652af1a74abdadf3dcaebd6513ee?s=250"
+                    alt="Sebastian López"
+                  ></v-img>
+                </v-avatar>
+                <v-list-item
+                  class="text-white"
+                  title="Sebastian López"
+                  subtitle="Full Stack Developer"
+                ></v-list-item>
+              </v-img>
+            </div>
+            <v-card-actions>
+              <v-row
+                ><v-spacer></v-spacer
+                ><v-switch
+                  class="ma-2"
+                  v-model="dosColumnas"
+                  :label="dosColumnas ? 'Mostrar dos columnas' : 'Mostrar una columna'"
+                  color="white"
+                  hide-details
+                ></v-switch
+              ></v-row>
+            </v-card-actions>
+          </v-card>
+        </v-hover>
       </v-col>
     </v-row>
     <v-row class="text-center" v-if="showiniciar">
