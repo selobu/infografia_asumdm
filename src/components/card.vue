@@ -20,10 +20,10 @@
       </v-card-actions>
       <v-card-text v-if="show"
         ><p v-html="content"></p>
-        <br />
-        <br />
-        <v-row> <v-spacer></v-spacer><slot name="nextbtn"></slot></v-row>
-      </v-card-text>
+       </v-card-text>
+      <v-card-actions v-if="show">
+        <slot name="nextbtn"></slot>
+      </v-card-actions>
     </v-card>
   </template>
   </v-hover>

@@ -13,9 +13,7 @@
           >
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
-                <v-card-title class="text-h5">
-                 ASUM-DM
-                </v-card-title>
+                <v-card-title class="text-h5"> ASUM-DM </v-card-title>
                 <v-card-subtitle
                   ><p>
                     Sebastian López Buriticá<br />
@@ -74,14 +72,16 @@
           :content="item.content"
           :subtitle="item.subtitle"
         >
-          <template v-slot:nextbtn v-if="!item.desablenextbtn"
-            ><v-btn
+          <template v-slot:nextbtn v-if="!item.desablenextbtn">
+            <v-spacer></v-spacer>
+            <v-btn
+              class="ma-1"
               @click="changeview(index)"
+              :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
               variant="outlined"
-              color="orange"
-            >
-              >>
-            </v-btn>
+              :color="show ? 'purple' : 'green'"
+            ></v-btn>
+            <v-spacer></v-spacer>
           </template>
         </Card>
       </v-col>
