@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12">
+      <v-col :cols="dosColumnas? '6':'12'">
         <v-hover v-slot="{ isHovering, props }">
           <v-card
             class="mx-auto"
@@ -48,9 +48,7 @@
           </v-card>
         </v-hover>
       </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      <v-col :cols="dosColumnas? '6':'12'">
         <Card class="mx-auto"
           title="Metodología ASUM-DM"
           subtitle="Analítica de datos"
