@@ -14,11 +14,11 @@
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
                 <v-card-title class="text-h5">
-                  INFOGRAFÍA ASUM-DM
+                 ASUM-DM
                 </v-card-title>
                 <v-card-subtitle
                   ><p>
-                    Elaborado por Sebastian López <br />
+                    Sebastian López Buriticá<br />
                     selobu@gmail.com
                   </p>
                 </v-card-subtitle>
