@@ -10,9 +10,7 @@
         </v-avatar>
       </v-col>
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          INFOGRAFÍA ASUM-DM
-        </h1>
+        <h1 class="display-2 font-weight-bold mb-3">INFOGRAFÍA ASUM-DM</h1>
       </v-col>
     </v-row>
     <v-row class="text-center" v-if="showiniciar">
@@ -25,8 +23,18 @@
         ></v-col
       >
     </v-row>
-    <v-row v-else>
-      <v-col cols="12" v-for="(item, index) in contents" :key="index">
+    <v-row v-else max-width="900px">
+      <v-col cols="12">
+        <v-row>
+          <v-spacer></v-spacer>
+          <v-switch
+            v-model="dosColumnas"
+            :label="dosColumnas ? 'Dos columnas' : 'Una columna'"
+          ></v-switch>
+          <v-spacer></v-spacer
+        ></v-row>
+      </v-col>
+      <v-col :cols="dosColumnas? '6':'12'" v-for="(item, index) in contents" :key="index">
         <Card
           v-if="item.showcurrent"
           :title="item.title"
@@ -67,6 +75,7 @@ export default {
   data: () => ({
     showPresentacion: false,
     showiniciar: true,
+    dosColumnas: false,
     contents: {
       card1: {
         title: "Fase 1",
@@ -86,8 +95,6 @@ export default {
             <li>Instalaciones</li>\
           </ul>\
         ",
-        showcurrent: true,
-        desablenextbtn: false,
       },
       card2: {
         title: "Fase 2",
@@ -99,8 +106,6 @@ export default {
          pero, además, es fundamental reconocer los requerimientos y las necesidades\
          organizacionales, al identificar este aspecto se podrán reconocer aquellos\
          problemas que podrían resolverse con la implementación de la analítica",
-        showcurrent: false,
-        desablenextbtn: false,
       },
       card3: {
         title: "Fase 3",
@@ -109,8 +114,6 @@ export default {
         content:
           "Recolección inicial de datos para determinar la consistencia de la información:\
          Fuente de datos, compra de datos, datos abiertos",
-        showcurrent: false,
-        desablenextbtn: false,
       },
       card4: {
         title: "Fase 4",
@@ -118,10 +121,8 @@ export default {
         image:
           "https://itcomunicacion.com.mx/wp-content/uploads/2020/02/datDeca-768x427.jpg",
         content:
-          "Seleccionar los datos, filtrarlos, completar los datos que haganfalta,\
+          "Seleccionar los datos, filtrarlos, completar los datos que hagan falta,\
          integración de los datos, homogenizar.",
-        showcurrent: false,
-        desablenextbtn: false,
       },
       card5: {
         title: "Fase 5",
@@ -130,8 +131,6 @@ export default {
           "https://c5e6g5f8.rocketcdn.me/wp-content/uploads/2014/10/pexels-photo-534220.jpeg",
         content:
           "Escoger la técnica para realizar el modelo, diseñar pruebas, controuir el modelo",
-        showcurrent: false,
-        desablenextbtn: false,
       },
       card6: {
         title: "Fase 6",
@@ -142,8 +141,6 @@ export default {
          sirve para realizar un mejor entendimiento de los datos de la empresa?\
          los datos generan una nueva analítica\
          verificar si responde a las expectativas.",
-        showcurrent: false,
-        desablenextbtn: true,
       },
     },
     show: false,
@@ -151,12 +148,14 @@ export default {
   components: {
     Card,
   },
+  beforeMount() {
+    this.contents = this.f_restarcontents(this.contents);
+  },
   methods: {
-    onrefresh() {
-      this.showiniciar = true;
+    f_restarcontents(contents) {
       let u = 1;
-      const lencontents = Object.keys(this.contents).length;
-      var newitems = { ...this.contents };
+      const lencontents = Object.keys(contents).length;
+      var newitems = { ...contents };
       for (const k in newitems) {
         newitems[k] = {
           ...newitems[k],
@@ -165,7 +164,11 @@ export default {
         };
         u += 1;
       }
-      this.contents = { ...newitems };
+      return { ...newitems };
+    },
+    onrefresh() {
+      this.showiniciar = true;
+      this.contents = this.f_restarcontents(this.contents);
     },
     changeview(index) {
       var found = false;

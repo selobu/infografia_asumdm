@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-main>
-      <HeaderToolbar />
-      <PageContent id="background" />
-      <Footer />
+    <v-main id="background">
+        <HeaderToolbar />
+        <PageContent class="fill-height"  />
+        <Footer></Footer>
     </v-main>
   </v-app>
 </template>

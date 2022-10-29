@@ -1,25 +1,27 @@
 <template>
-  <v-card class="mx-auto" max-width="450px">
-    <v-img :src="image" height="200px" cover></v-img>
-    <v-card-title>{{ title }}</v-card-title>
-    <v-card-subtitle>{{ subtitle }}</v-card-subtitle>
-    <v-card-actions>
-      <v-spacer></v-spacer>
-      <v-btn
-        @click="show = !show"
-        :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-        variant="outlined"
-        color="green"
-      ></v-btn>
-      <v-spacer></v-spacer>
-    </v-card-actions>
-    <v-card-text v-if="show"
-      ><p v-html="content"></p>
-      <br />
-      <br />
-      <v-row> <v-spacer></v-spacer><slot name="nextbtn"></slot></v-row>
-    </v-card-text>
-  </v-card>
+  <v-hover v-slot="{ hover }">
+    <v-card class="mx-auto" max-width="500px" :class="{ 'on-hover': hover }">
+      <v-img :src="image" height="200px" cover></v-img>
+      <v-card-title>{{ title }}</v-card-title>
+      <v-card-subtitle>{{ subtitle }}</v-card-subtitle>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn
+          @click="show = !show"
+          :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+          variant="outlined"
+          :color="show?'purple':'green'"
+        ></v-btn>
+        <v-spacer></v-spacer>
+      </v-card-actions>
+      <v-card-text v-if="show"
+        ><p v-html="content"></p>
+        <br />
+        <br />
+        <v-row> <v-spacer></v-spacer><slot name="nextbtn"></slot></v-row>
+      </v-card-text>
+    </v-card>
+  </v-hover>
 </template>
 <script>
 export default {
