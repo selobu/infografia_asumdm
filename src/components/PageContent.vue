@@ -55,7 +55,7 @@
           title="Metodología ASUM-DM"
           subtitle="Analítica de datos"
           :content="asumcontent"
-          image="https://www.researchgate.net/profile/Christophe-Ponsard/publication/321944704/figure/fig2/AS:585568132022272@1516621730460/ASUM-DM-method-source-29.png"
+          :image="asumimage"
         > </Card>
       </v-col>
     </v-row>
@@ -131,6 +131,7 @@ export default {
     showPresentacion: false,
     showiniciar: true,
     dosColumnas: false,
+    asumimage:"https://img.ibxk.com.br/2021/01/11/ibm-11183429805392.jpg?w=704",
     asumcontent:"Debido a las falencias en <strong>CRISP-DM</strong>, en 2015 IBM publicó el método unificado para\
             la solución de analíticas para el modelo de proceso de minado y predicción de datos - <strong>ASUM-DM</strong>.<br/>\
             Se basa en <strong>CRISP-DM</strong> per lo extiende con tareas y actividades en infraestructura, opercaciones, \
