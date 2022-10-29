@@ -2,6 +2,7 @@
   <v-hover v-slot="{ hover }">
     <v-card class="mx-auto" max-width="500px" :class="{ 'on-hover': hover }">
       <v-img :src="image" height="200px" cover></v-img>
+
       <v-card-title>{{ title }}</v-card-title>
       <v-card-subtitle>{{ subtitle }}</v-card-subtitle>
       <v-card-actions>
@@ -10,7 +11,7 @@
           @click="show = !show"
           :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
           variant="outlined"
-          :color="show?'purple':'green'"
+          :color="show ? 'purple' : 'green'"
         ></v-btn>
         <v-spacer></v-spacer>
       </v-card-actions>
