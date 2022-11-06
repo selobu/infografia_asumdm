@@ -15,12 +15,12 @@
               <v-img
                 height="100%"
                 cover
-                src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+                src="/img/server-room.jpg"
               >
                 <v-avatar color="grey" size="150" rounded="0">
                   <v-img
                     cover
-                    src="@/assets/img/avatar.jpeg"
+                    src="/img/avatar.jpeg"
                     alt="Sebastian López"
                   ></v-img>
                 </v-avatar>
