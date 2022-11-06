@@ -20,7 +20,7 @@
                 <v-avatar color="grey" size="150" rounded="0">
                   <v-img
                     cover
-                    src="https://www.gravatar.com/avatar/302c652af1a74abdadf3dcaebd6513ee?s=250"
+                    src="@/assets/img/avatar.jpeg"
                     alt="Sebastian López"
                   ></v-img>
                 </v-avatar>
@@ -122,6 +122,13 @@
 <script>
 import Footer from "@/layout/Footer.vue";
 import Card from "./card.vue";
+
+const Img = {
+    asum: '/img/ibm-11183429805392.jpg',   // was iconUrl: './assets/img.png',
+//  iconUrl: require('@/assets/img.png'), // use @ as alternative, depending on the path
+    // ...
+};
+
 export default {
   name: "HelloWorld",
 
@@ -129,7 +136,7 @@ export default {
     showPresentacion: false,
     showiniciar: true,
     dosColumnas: false,
-    asumimage:"https://img.ibxk.com.br/2021/01/11/ibm-11183429805392.jpg?w=704",
+    asumimage: Img.asum,
     asumcontent:"Debido a las falencias en <strong>CRISP-DM</strong>, en 2015 IBM publicó el método unificado para\
             la solución de analíticas para el modelo de proceso de minado y predicción de datos - <strong>ASUM-DM</strong>.<br/>\
             Se basa en <strong>CRISP-DM</strong> per lo extiende con tareas y actividades en infraestructura, opercaciones, \
@@ -142,7 +149,7 @@ export default {
         title: "Fase 1",
         subtitle: "Inicio del proyecto",
         image:
-          "https://luisaolvera.com/wp-content/uploads/2019/06/a-que-edad-caminan-los-bebes-cuando-lo-hacen.jpg",
+          "/img/a-que-edad-caminan-los-bebes-cuando-lo-hacen.jpg",
         content:
           "Lo primero es realizar un levantamiento de la información, \
           se debe hacer un diagnóstico respecto a qué tan preparada está la\
@@ -161,7 +168,7 @@ export default {
         title: "Fase 2",
         subtitle: "Enternder el negocio",
         image:
-          "https://agenciadomus.com.mx/blog/wp-content/uploads/2019/06/blog-e1560797059757-1140x641.jpg",
+          "/img/blog-e1560797059757-1140x641.jpg",
         content:
           "En esta etapa es importante entender: <br/><br/>\
           <ul> \
@@ -177,7 +184,7 @@ export default {
       card3: {
         title: "Fase 3",
         subtitle: "Descubrimiento y entendimiento de los datos",
-        image: "https://miro.medium.com/max/3000/1*0o44SgYfO_NgbEbqRICftw.png",
+        image: "/img/1_0o44SgYfO_NgbEbqRICftw.png",
         content:
           "Recolección inicial de datos para determinar la consistencia de la información:<br>\
          <ul>\
@@ -190,7 +197,7 @@ export default {
         title: "Fase 4",
         subtitle: "Preparación de los datos",
         image:
-          "https://itcomunicacion.com.mx/wp-content/uploads/2020/02/datDeca-768x427.jpg",
+          "/img/datDeca-768x427.jpg",
         content:
           "<strong>Seleccionar los datos</strong>: Evitar traer los datos a la memoria en caso\
            del big data, por ejemplo en pyspark evitar convertir los datos a pandasdataframe\
@@ -204,14 +211,14 @@ export default {
         title: "Fase 5",
         subtitle: "Construcción del modelo",
         image:
-          "https://c5e6g5f8.rocketcdn.me/wp-content/uploads/2014/10/pexels-photo-534220.jpeg",
+          "/img/pexels-photo-534220.jpeg",
         content:
           "Escoger la técnica para realizar el modelo, diseñar pruebas, contruir el modelo",
       },
       card6: {
         title: "Fase 6",
         subtitle: "Evaluar el modelo",
-        image: "https://miro.medium.com/max/1135/1*cwEeGqeSP5h5MXFm67lD3w.png",
+        image: "/img/1_cwEeGqeSP5h5MXFm67lD3w.png",
         content:
           "Verificar si el resultado cumple con las metas del modelo y los objetivos del negocio,\
          sirve para realizar un mejor entendimiento de los datos de la empresa?<br/>\
